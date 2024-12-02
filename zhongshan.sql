@@ -1,0 +1,1 @@
+ALTER TABLE zhongshan ADD COLUMN api text;

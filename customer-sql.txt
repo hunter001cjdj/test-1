@@ -1,0 +1,2 @@
+insert into customer values(null, '楊孟諠', '高雄市小港區', 'yang', '123456', 'acac8521@gmail.com');
+ALTER TABLE customer ADD COLUMN role VARCHAR(10) DEFAULT 'user';

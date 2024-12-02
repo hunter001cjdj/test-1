@@ -1,0 +1,55 @@
+drop database if exists restaurant;
+create database restaurant default character set utf8 collate utf8_general_ci;
+grant all on restaurant.* to 'staff'@'localhost' identified by 'password';
+use restaurant;
+
+DROP DATABASE IF EXISTS restaurant;
+CREATE DATABASE restaurant DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+-- 檢查並刪除已存在的使用者
+DROP USER IF EXISTS 'staff'@'localhost';
+
+-- 創建新使用者並授權
+CREATE USER 'staff'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL ON restaurant.* TO 'staff'@'localhost';
+
+USE restaurant;
+
+
+
+create table restaurant.danshui (
+	id int auto_increment primary key, 
+    kind varchar(200) not null,
+	name varchar(200) not null, 
+	price varchar(200) not null,
+    address varchar(200) not null,
+    hours varchar(200) not null
+);
+
+
+insert into danshui values(null, '早餐','橡皮糖', '200~400','新北市淡水區英專路21巷29號3樓','周日至周三11:00-17:00');
+insert into danshui values(null, '早餐','韓鍋鍋', '100~200','新北市淡水區水源街一段122巷32號','11:30-14:00、17:00-20:30（周一、周二公休）');
+insert into danshui values(null, '早餐','淡水滬尾豆花店', '100~200','新北市淡水區英專路21巷9號','11:00~23:00');
+insert into danshui values(null, '早餐', '福哥石頭餅', '200~400','新北市淡水區清水街9號','每周16:45~21:00');
+insert into danshui values(null, '早餐','雞道樂', '200~400','新北市淡水區公明街55-2號','12:00~14:00、17:00~21:00');
+insert into danshui values(null, '早餐','之間茶食器', '200~400','新北市淡水區中正路330號','12:00-21:00（周二公休）');
+insert into danshui values(null, '早餐','可口魚丸', '200~400','新北市淡水區中正路232號','每周07:00~16:00');
+insert into danshui values(null, '早餐','麻吉奶奶鮮奶麻糬', '200~400','新北市淡水區中正路220號','每周12:00~20:00');
+insert into danshui values(null, '早餐','水灣餐廳Waterfront 榕堤店', '200~400','新北市淡水區中正路229-9號','每周12:30~20:30');
+insert into danshui values(null, '早餐','淡水長堤咖啡館LB Café', '200~400','新北市淡水區中正路21巷9號','週一至週五11:00~22:00,週六、日營業至23:00');
+insert into danshui values(null, '早餐','大吉祥香豆富', '200~400','新北市淡水區學府路171號','11:00~20:00'); 
+
+
+
+更新欄位資訊
+UPDATE danshui
+SET photos ='shop-photo/danshui/煎匙早午餐揚州炒飯logo.jpg,shop-photo/danshui/煎匙早午餐揚州炒飯menu.jpg,shop-photo/danshui/煎匙早午餐揚州炒飯-1.jpg,shop-photo/danshui/煎匙早午餐揚州炒飯-2.jpg'
+WHERE id = ;
+
+
+新增一個欄位
+ALTER TABLE danshui ADD COLUMN api text;
+
+UPDATE danshui
+SET api ='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.7613343798694!2d121.447172375163!3d25.1775353777237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442affeff524145%3A0x98dd742bb5681a3a!2z5L2z5L2z5pep6aSQ5bqX!5e0!3m2!1szh-TW!2stw!4v1730081483162!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+WHERE id = 3;

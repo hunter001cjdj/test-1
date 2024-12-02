@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f26d30;
+    padding: 10px;
+    font-weight:bold;
+
+}
+
+.logo-container {
+    text-align: center;
+}
+
+#logo {
+    height: 100px;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-left {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-right {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #070707;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover {
+    transform: scale(1.3);
+}
+
+/* TEST */
+
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #f26d30;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f26d30;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f26d30;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e55926;
+}
